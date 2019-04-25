@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_config version="2.0" init="Changes">
+    <Setting Name="OMQ::Assist::Settings::Account" Required="1" Valid="1">
+        <Description Translatable="1">Name/URL of the OMQ account.</Description>
+        <Navigation>CloudService::OMQ::Assist::Settings</Navigation>
+        <Value>
+            <Item Regex=""/>
+        </Value>
+    </Setting>
+
+    <Setting Name="OMQ::Assist::Settings::Apikey" Required="1" Valid="1">
+        <Description Translatable="1">Apikey of OMQ assist.</Description>
+        <Navigation>CloudService::OMQ::Assist::Settings</Navigation>
+        <Value>
+            <Item Regex=""/>
+        </Value>
+    </Setting>
+
+    <Setting Name="OMQ::Assist::Settings::EnableDebugLog" Required="1" Valid="1">
+        <Description Translatable="1">Enable debug information in OTRS log.</Description>
+        <Navigation>CloudService::OMQ::Assist::Settings</Navigation>
+        <Value>
+            <Item ValueType="Select" SelectedID="0">
+                <Item ValueType="Option" Value="1" Translatable="1">yes</Item>
+                <Item ValueType="Option" Value="0" Translatable="1">no</Item>
+            </Item>
+        </Value>
+    </Setting>
+
+    <Setting Name="OMQ::Assist::Settings::UserGroupEnabled" Required="1" Valid="1">
+        <Description Translatable="1">Use groups for OMQ assist. OMQ assist will only be displayed to users of the
+            "omq-agents" group.
+        </Description>
+        <Navigation>CloudService::OMQ::Assist::Settings</Navigation>
+        <Value>
+            <Item ValueType="Select" SelectedID="0">
+                <Item ValueType="Option" Value="1" Translatable="1">yes</Item>
+                <Item ValueType="Option" Value="0" Translatable="1">no</Item>
+            </Item>
+        </Value>
+    </Setting>
+</otrs_config>

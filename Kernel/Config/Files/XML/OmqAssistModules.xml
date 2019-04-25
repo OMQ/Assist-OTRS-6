@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_config version="2.0" init="Changes">
+    <Setting Name="Frontend::Module###OmqAdministration" Required="1" Valid="1">
+        <Description Translatable="1">Frontend module for OMQ administration.</Description>
+        <Navigation>Frontend::Admin::Assist::ModuleRegistration</Navigation>
+        <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="Group">
+                        <Array>
+                            <Item>omq-admin</Item>
+                            <Item>omq-editors</Item>
+                        </Array>
+                    </Item>
+                    <Item Key="GroupRo">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="Description" Translatable="1">OMQ module for administration</Item>
+                    <Item Key="Title" Translatable="1">OMQ</Item>
+                    <Item Key="NavBarName">OMQ</Item>
+                </Hash>
+            </Item>
+        </Value>
+    </Setting>
+
+    <Setting Name="Frontend::Navigation###OmqAdministration###002-OmqAdministration" Required="0" Valid="1">
+        <Description Translatable="1">OMQ menu item registration.</Description>
+        <Navigation>Frontend::Admin::ModuleRegistration::MainMenu</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+                <Item>
+                    <Hash>
+                        <Item Key="Group">
+                            <Array>
+                                <Item>omq-admin</Item>
+                                <Item>omq-editors</Item>
+                            </Array>
+                        </Item>
+                        <Item Key="GroupRo">
+                            <Array>
+                            </Array>
+                        </Item>
+                        <Item Key="Description" Translatable="1">OMQ administration</Item>
+                        <Item Key="Name" Translatable="1">OMQ</Item>
+                        <Item Key="Link">Action=OmqAdministration</Item>
+                        <Item Key="LinkOption" />
+                        <Item Key="NavBar">OMQ</Item>
+                        <Item Key="Type">Menu</Item>
+                        <Item Key="Block">ItemArea</Item>
+                        <Item Key="Prio">8500</Item>
+                    </Hash>
+                </Item>
+            </Array>
+        </Value>
+    </Setting>
+</otrs_config>
